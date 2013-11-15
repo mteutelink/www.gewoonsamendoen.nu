@@ -161,8 +161,13 @@
 }
 
 a {
-	color:#921171;
+	color: #921171;
+	font-weight: bold;
 	text-decoration: underline;
+}
+
+a:hover {
+	color: black;
 }
 
 .social, .interaction {
@@ -176,6 +181,7 @@ a {
 }
 
 .social a {
+	font-weight: normal;
 	text-decoration: none;
 }
 
