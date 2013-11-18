@@ -19,6 +19,20 @@
 	text-align: center;
 }
 
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	/* IPAD */
+	body {
+		background-color: black;
+	}
+
+	.container { 
+		width: 1022px;
+		margin-left: 2px;
+	}
+}
+
 .gray { background-color:gray; color:white; }
 .purple { background-color:#921171; color:white; }
 .yellow { background-color:#F8DB30; color:#921171; }
