@@ -19,20 +19,6 @@
 	text-align: center;
 }
 
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) {
-	/* IPAD */
-	body {
-		background-color: black;
-	}
-
-	.container { 
-		width: 1022px;
-		margin-left: 2px;
-	}
-}
-
 .gray { background-color:gray; color:white; }
 .purple { background-color:#921171; color:white; }
 .yellow { background-color:#F8DB30; color:#921171; }
@@ -230,6 +216,44 @@ a:hover {
 
 .copyright img {
 	margin-top: -4px;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	/* IPAD */
+	body {
+		background-color: black;
+	}
+
+	.container { 
+		width: 1022px;
+		margin-left: 2px;
+	}
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	/* IPHONE */
+	.container { 
+		width: 320px;
+		height: 480px;
+	}
+	
+	.large {
+		width: 340px;
+		height: 480px; 
+	}
+
+	.themepicture, .footer, .fill {
+		display: none;
+	}
+	
+	.positie_en_naam {
+		opacity:0.4;
+		filter:alpha(opacity=40);
+	}
 }
 
 .isotope,
