@@ -74,8 +74,6 @@
 
 .themepicture {
 	float:left; 
-	width:680px; 
-	height:690px;
 }
 
 .candidate {
@@ -120,9 +118,11 @@
 }
 
 .themetext {
-	float:left; 
+	position:absolute;
+	margin-left: 680px;
 	width:340px; 
 	height:690px; 
+	z-index:4;
 	background-color: #F8DB30; 
 }
 
