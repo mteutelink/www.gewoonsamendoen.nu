@@ -246,6 +246,10 @@ and (max-device-width : 480px) {
 		height: 480px; 
 	}
 
+    .themetext {
+	   margin-left: 0px;
+    }
+	
 	.themepicture, .footer, .fill {
 		display: none;
 	}

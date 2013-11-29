@@ -11,18 +11,24 @@ $(document).ready(function(){
 		itemPositionDataEnabled: true
 	});
 	
-	$container.isotope({ filter : "#hans, .hans, .small[data-target!=hans]" });
-	$('html, body').animate({scrollTop: 0}, 0);
-
-	$(".positie_en_naam").each(function(index) {
-		$(this).hide();
-	});
 	
-	$(".picture").hover(function(event) {
-			$(this).children("span").fadeIn();
-		},function(event){
-			$(this).children("span").fadeOut();
-	});
+	if (matchMedia('only screen and (max-width: 480px)').matches || matchMedia('only screen and (max-width: 480px)').matches) {
+		$container.isotope({ filter : ".small" });
+		$('html, body').animate({scrollTop: 0}, 0);	
+	} else {
+		$container.isotope({ filter : "#hans, .hans, .small[data-target!=hans]" });
+		$('html, body').animate({scrollTop: 0}, 0);
+
+		$(".positie_en_naam").each(function(index) {
+			$(this).hide();
+		});
+
+		$(".picture").hover(function(event) {
+				$(this).children("span").fadeIn();
+			},function(event){
+				$(this).children("span").fadeOut();
+		});
+	};
 	
 	$(".small[data-target]").click(function(event) {
 		var candidate = $(this).attr("data-target")
