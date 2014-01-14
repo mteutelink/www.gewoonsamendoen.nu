@@ -104,7 +104,7 @@
 
 .themepicture h2 {
 	text-align: left;
-	width:300px; 
+	width:360px; 
 	height:170px; 
 	padding-left:45px; 
 	padding-top:280px; 
@@ -117,6 +117,14 @@
 	line-height: 40px;
 }
 
+#hans .themepicture h2 {
+	width: 360px;
+}
+
+#shanna .themepicture h2 {
+	width: 400px;
+}
+
 .themetext {
 	position:absolute;
 	margin-left: 680px;
@@ -127,8 +135,8 @@
 }
 
 .text {
-	padding-left:45px; 
-	padding-top:140px;
+	padding-left:30px; 
+	padding-top:120px;
 }
 
 .themetext p {
@@ -137,7 +145,7 @@
 	line-height:16px;
 	color: black;
 	text-align: left;
-	padding-right:45px; 
+	padding-right:35px; 
 }
 
 .themetext h2 {
@@ -145,7 +153,7 @@
 	font-size: 28px;
 	height:21px;
 	color: #921171;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	text-align: left;
 }
 
