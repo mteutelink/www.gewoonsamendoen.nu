@@ -5,18 +5,24 @@
 @font-face {
 	/* Helvetica Light Condensed */
 	font-family: 'Helvetica_Light_Condensed';
-	src: url('../fonts/HelveticaNeueLTStd-LtCn.otf');
+	src: local("☺"),
+		url("../fonts/HelveticaNeueLTStd-LtCn.woff") format("woff"),
+		url('../fonts/HelveticaNeueLTStd-LtCn.otf') format("opentype");
 }
 @font-face {
 	/* Helvetica Condensed Oblique */
 	font-family: 'Helvetica_Condensed_Oblique';
-	src: url('../fonts/HelveticaNeueLTStd-HvCnO.otf');
+	src: local("☺"),
+		url("../fonts/HelveticaNeueLTStd-HvCnO.woff") format("woff"),
+		url('../fonts/HelveticaNeueLTStd-HvCnO.otf') format("opentype");
 }
 
 @font-face {
 	/* Helvetica Bold Condensed */
 	font-family: 'Helvetica_Bold_Condensed';
-	src: url('../fonts/HelveticaNeueLTStd-BdCn.otf');
+	src: local("☺"),
+		url("../fonts/HelveticaNeueLTStd-BdCn.woff") format("woff"),
+		url('../fonts/HelveticaNeueLTStd-BdCn.otf') format("opentype");
 }
 
 .container { 
@@ -47,7 +53,7 @@
 }
 
 .small p, .fill p { 
-	font-family: "Helvetica_Light_Condensed", "Helvetica Neue"; 
+	font-family: "Helvetica_Light_Condensed"; 
 	font-size: 32px;
 	text-decoration:underline;
 	text-align: left;
