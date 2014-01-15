@@ -13,6 +13,12 @@
 	src: url('../fonts/HelveticaNeueLTStd-HvCnO.otf');
 }
 
+@font-face {
+	/* Helvetica Bold Condensed */
+	font-family: 'Helvetica_Bold_Condensed';
+	src: url('../fonts/HelveticaNeueLTStd-BdCn.otf');
+}
+
 .container { 
 	padding:0;
 	width: 1024px;
@@ -45,7 +51,7 @@
 	font-size: 32px;
 	text-decoration:underline;
 	text-align: left;
-	line-height: 38px;
+	line-height: 32px;
 	padding-top: 45px;
 	padding-left: 45px;
 	padding-right: 45px;
@@ -224,6 +230,29 @@ a:hover {
 
 .copyright img {
 	margin-top: -4px;
+}
+
+#verkiezingsprogramma {
+	font-family: "Helvetica_Bold_Condensed"; 
+	font-size: 22px;
+	height: 70px; 
+	width: 680px; 
+	background-color: black; 
+	color: white; 
+	float: left; 
+	text-decoration: none; 
+	padding-top: 22px;
+}
+
+#fractiewebsite {
+	font-size: 16px;
+	height: 70px; 
+	width: 340px; 
+	background-color: #921171; 
+	color: white; 
+	float: left; 
+	text-decoration: none; 
+	padding-top: 22px;
 }
 
 @media only screen 
