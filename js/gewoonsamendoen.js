@@ -28,15 +28,15 @@ $(document).ready(function(){
 			},function(event){
 				$(this).children("span").fadeOut();
 		});
+
+		$(".small[data-target]").click(function(event) {
+			var candidate = $(this).attr("data-target")
+			
+			var filter = "#" + candidate + ", ." + candidate+ ", .small[data-target!=" + candidate + "]";
+			$container.isotope({ filter : filter });
+			
+			$('html, body').animate({scrollTop: $("#" + candidate).data('isotope-item-position').y}, 200);
+			return false;
+		});				
 	};
-	
-	$(".small[data-target]").click(function(event) {
-		var candidate = $(this).attr("data-target")
-		
-		var filter = "#" + candidate + ", ." + candidate+ ", .small[data-target!=" + candidate + "]";
-		$container.isotope({ filter : filter });
-		
-		$('html, body').animate({scrollTop: $("#" + candidate).data('isotope-item-position').y}, 200);
-		return false;
-	});				
 });
