@@ -133,6 +133,10 @@
 	width: 360px;
 }
 
+#niels .themepicture h2 {
+	width: 340px;
+}
+
 #shanna .themepicture h2 {
 	width: 400px;
 }
@@ -160,19 +164,23 @@
 	padding-right:35px; 
 }
 
+#hans h2 {
+	line-height: 0.8;
+}
+
 .themetext h2 {
 	font-family: "Helvetica_Condensed_Oblique"; 
 	font-size: 28px;
 	height:21px;
 	color: #921171;
-	margin-bottom: 30px;
+	margin-bottom: 36px;
 	text-align: left;
 }
 
 .fa-stack {
 	width: 30px;
 	height: 30px;
-	margin-top: -28px;
+	margin-top: -30px;
 }
 
 .fa-inverse {
@@ -238,6 +246,7 @@ a:hover {
 	margin-top: -4px;
 }
 
+#speerpunten,
 #verkiezingsprogramma {
 	font-family: "Helvetica_Bold_Condensed"; 
 	font-size: 22px;

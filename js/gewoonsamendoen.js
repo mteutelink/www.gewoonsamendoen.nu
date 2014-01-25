@@ -37,6 +37,19 @@ $(document).ready(function(){
 			
 			$('html, body').animate({scrollTop: $("#" + candidate).data('isotope-item-position').y}, 200);
 			return false;
-		});				
+		});			
+		
+		window.setInterval(function () {
+			var remaining = $("#seconds").html();
+			remaining = eval(remaining);
+			
+			if (remaining == 0) {
+				$("#verkiezingsprogramma").toggle();
+				$("#speerpunten").toggle();
+				$("#seconds").html("3");
+			} else {
+				$("#seconds").html(remaining - 1);
+			}
+		}, 1000);	
 	};
 });
