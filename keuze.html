@@ -29,23 +29,23 @@
 		<meta property=”og:site_name” content=”Gewoon Samen Doen: Stem Burgerbelangen Enschede!”/>
 		
 		<!-- Generic -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link rel="stylesheet" href="font-awesome-4.0.3/css/font-awesome.min.css">
+		<link href="http://www.gewoonsamendoen.nu/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="http://www.gewoonsamendoen.nu/font-awesome-4.0.3/css/font-awesome.min.css">
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="http://www.gewoonsamendoen.nu/js/bootstrap.min.js"></script>
 
 		<!-- Gewoon Samen Doen -->
 		<link rel="icon" type="image/png" href="images/Logo_Burgerbelangen_web.png" />
-		<script src="js/gewoonsamendoen.js"></script>
-		<script src="js/ga.js"></script>
+		<script src="http://www.gewoonsamendoen.nu/js/gewoonsamendoen.js"></script>
+		<script src="http://www.gewoonsamendoen.nu/js/ga.js"></script>
 		
 		<style type="text/css">
 			@font-face {
 				/* Helvetica Bold Condensed */
 				font-family: 'Helvetica_Bold_Condensed';
 				src: local("☺"),
-					url("fonts/HelveticaNeueLTStd-BdCn.woff") format("woff"),
-					url('fonts/HelveticaNeueLTStd-BdCn.otf') format("opentype");
+					url("http://www.gewoonsamendoen.nu/fonts/HelveticaNeueLTStd-BdCn.woff") format("woff"),
+					url('http://www.gewoonsamendoen.nu/fonts/HelveticaNeueLTStd-BdCn.otf') format("opentype");
 			}
 			
 			h1 {
@@ -80,6 +80,18 @@
 			#automatisch a:hover {
 				color: black;
 			}
+
+			#remember, #remember a {
+				font-family: "Helvetica_Bold_Condensed"; 
+				font-size: 22px;
+				color: #F8DB30; 
+				text-decoration: none; 
+				text-align: center;
+			}
+			
+			#klik_remember:hover {
+				 cursor: pointer; 
+			}
 			
 			#campagnewebsite {
 				font-family: "Helvetica_Bold_Condensed"; 
@@ -111,13 +123,36 @@
 		</style>
 		
 		<script src="https://code.jquery.com/jquery.js"></script>
+		<script src="http://www.gewoonsamendoen.nu/js/jquery.cookie.js"></script>
 		<script>
 			$(document).ready(function(){
+				//$.removeCookie("remember_choice_website")
+				if($.cookie("remember_choice_website")) {
+					window.location.href = $.cookie("remember_choice_website");
+				}
+			
+				$("#klik_remember").click(function(event) {
+					$("#checkbox_remember").prop('checked', $('#checkbox_remember').is(':checked') ? false : true);				
+				});
+
+				$("a").click(function(event) { 
+					if ($('#checkbox_remember').is(':checked')) {
+						var date = new Date();
+	 					date.setTime(date.getTime() + (24/*hour*/ * 60/*minutes*/ * 60/*seconds*/ * 1000));
+						$.cookie("remember_choice_website", $(this).attr('href'), { expires: date });
+					}
+				});
+
    				window.setInterval(function () {
 					var remaining = $("#seconds").html();
 					remaining = eval(remaining);
 					
 					if (remaining == 0) {
+						if ($('#checkbox_remember').is(':checked')) {
+							var date = new Date();
+	 						date.setTime(date.getTime() + (24/*hour*/ * 60/*minutes*/ * 60/*seconds*/ * 1000));
+							$.cookie("remember_choice_website", "http://www.gewoonsamendoen.nu", { expires: date });
+						}
 						window.location.href = "http://www.gewoonsamendoen.nu";
 					} else {
 						$("#seconds").html(remaining - 1);
@@ -155,9 +190,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-2 col-sm-3 col-xs-6">
-					<a href="http://www.burgerbelangenenschede.nl" target="_blank" title="Ga naar de fractie website"><img src="images/Burgerbelangen_Enschede.jpg" alt="Burgerbelangen Enschede"/></a>
+					<a href="http://www.burgerbelangenenschede.nl" title="Ga naar de fractie website"><img src="http://www.gewoonsamendoen.nu/images/Burgerbelangen_Enschede.jpg" alt="Burgerbelangen Enschede"/></a>
 				</div>
-				<div class="col-md-6 col-sm-6 hidden-xs">
+				<div class="col-md-8 col-sm-6 hidden-xs">
 					<h1 >Burgerbelangen Enschede</h1>
 				</div>
 				<div class="col-md-2 col-sm-3 col-xs-6 logo">
@@ -172,6 +207,12 @@
 				<div class="col-md-12 col-sm-13 col-xs-12" id="automatisch">
 					Over <span id="seconds">5</span> seconden wordt u doorgestuurd naar de verkiezings website <a href="http://www.gewoonsamendoen.nu"  style="color: black;">(http://www.gewoonsamendoen.nu)</a>
 				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-sm-13 col-xs-12" id="remember">
+					<input type="checkbox" name="remember" value="remember" id="checkbox_remember"/><span id="klik_remember" style="padding-left: 10px;">Klik hier om uw keuze te onthouden</span>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
