@@ -282,6 +282,12 @@ and (max-device-width : 1024px) {
 		width: 1022px;
 		margin-left: 2px;
 	}
+	
+	.positie_en_naam {
+		opacity:0.4;
+		filter:alpha(opacity=40);
+	}
+
 }
 
 @media only screen 

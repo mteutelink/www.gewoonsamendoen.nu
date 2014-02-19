@@ -23,11 +23,13 @@ $(document).ready(function(){
 			$(this).hide();
 		});
 
-		$(".picture").hover(function(event) {
-				$(this).children("span").fadeIn();
-			},function(event){
-				$(this).children("span").fadeOut();
-		});
+		if (!matchMedia('only screen and ((min-width: 768px) or (max-width: 1024px))').matches) {
+			$(".picture").hover(function(event) {
+					$(this).children("span").fadeIn();
+				},function(event){
+					$(this).children("span").fadeOut();
+			});
+		};
 
 		$(".small[data-target]").click(function(event) {
 			var candidate = $(this).attr("data-target")
