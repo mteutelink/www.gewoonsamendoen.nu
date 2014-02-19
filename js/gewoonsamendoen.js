@@ -23,7 +23,7 @@ $(document).ready(function(){
 			$(this).hide();
 		});
 
-		if (!matchMedia('only screen and ((min-width: 768px) or (max-width: 1024px))').matches) {
+		if (!matchMedia('only screen and (max-width: 768px)').matches) {
 			$(".picture").hover(function(event) {
 					$(this).children("span").fadeIn();
 				},function(event){
