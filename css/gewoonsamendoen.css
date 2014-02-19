@@ -293,11 +293,16 @@ and (max-device-width : 1024px) {
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
 	/* IPHONE */
+	body {
+		background-color: black;
+	}
+
 	.container { 
 		width: 320px;
 		height: 480px;
 	}
 	
+	/*
 	.large {
 		width: 340px;
 		height: 480px; 
@@ -310,6 +315,7 @@ and (max-device-width : 480px) {
 	.themepicture, .footer, .fill {
 		display: none;
 	}
+	*/
 	
 	.positie_en_naam {
 		opacity:0.4;
