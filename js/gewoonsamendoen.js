@@ -27,7 +27,7 @@ $(document).ready(function(){
 		if (!matchMedia('only screen and (max-width: 768px)').matches) {
 		} else
 		if (!matchMedia('only screen and (max-width: 1024px)').matches) {
-		else {
+		} else {
 		
 			$(".positie_en_naam").each(function(index) {
 				$(this).hide();
