@@ -22,7 +22,8 @@ $(document).ready(function(){
 		$('html, body').animate({scrollTop: 0}, 0);
 
 
-		if (matchMedia('only screen and (max-width: 480px)').matches || 
+		if (matchMedia('only screen and (max-width: 320px)').matches || 
+			matchMedia('only screen and (max-width: 480px)').matches || 
 			matchMedia('only screen and (max-width: 768px)').matches || 
 			matchMedia('only screen and (max-width: 1024px)').matches) {
 		} else {
