@@ -19,11 +19,12 @@ $(document).ready(function(){
 		$container.isotope({ filter : "#hans, .hans, .small[data-target!=hans]" });
 		$('html, body').animate({scrollTop: 0}, 0);
 
-		$(".positie_en_naam").each(function(index) {
-			$(this).hide();
-		});
 
 		if (!matchMedia('only screen and (max-width: 768px)').matches) {
+			$(".positie_en_naam").each(function(index) {
+				$(this).hide();
+			});
+
 			$(".picture").hover(function(event) {
 					$(this).children("span").fadeIn();
 				},function(event){
